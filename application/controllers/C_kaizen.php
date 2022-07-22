@@ -32,10 +32,10 @@ class C_kaizen extends CI_Controller {
         // $this->load->view('isi');
         // $this->load->view('tentang_kami');
 		// $this->load->view('hadiah2'); //owl-carousel
-		// $this->load->view('pemberian_hadiah'); //vanilla carousel, yang dipakai
+		$this->load->view('pemberian_hadiah'); //vanilla carousel, yang dipakai
 		// $this->load->view('cobagallery');
-		$data['gedung']  = $this->M_kaizen->gedung();
-		$this->load->view('isi_ide', $data);
+		// $data['gedung']  = $this->M_kaizen->gedung();
+		// $this->load->view('isi_ide', $data);
 
 	}
 
