@@ -1,0 +1,41 @@
+.baru {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 80px;
+  left: 56px;
+  font-size:xx-large;
+}
+
+.top-left {
+  position: absolute;
+  top: 80px;
+  left: 56px;
+  font-size:xx-large;
+}
+
+.top-right {
+  position: absolute;
+  top: 80px;
+  right: 56px;
+  font-size:xx-large;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 80px;
+  right: 56px;
+  font-size:xx-large;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:xx-large;
+}
