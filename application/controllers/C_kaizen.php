@@ -29,13 +29,19 @@ class C_kaizen extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('header');
+		$pemberian_hadiah = $this->M_kaizen->get_pemberian_hadiah()->result();
+		$jenis_hadiah 	  = $this->M_kaizen->get_jenis_hadiah()->result();
+		$hadiah = array(
+			'pemberian_hadiah' 	=> $pemberian_hadiah,
+			'jenis_hadiah'		=> $jenis_hadiah
+		);
         // $this->load->view('isi');
         // $this->load->view('tentang_kami');
-		// $this->load->view('hadiah2'); //owl-carousel
-		$this->load->view('pemberian_hadiah'); //vanilla carousel, yang dipakai
+		$this->load->view('hadiah2', $hadiah); 
+		// $this->load->view('pemberian_hadiah'); //vanilla carousel, yang dipakai
 		// $this->load->view('cobagallery');
-		// $data['gedung']  = $this->M_kaizen->gedung();
-		// $this->load->view('isi_ide', $data);
+		$data['gedung']  = $this->M_kaizen->gedung();
+		$this->load->view('isi_ide', $data);
 
 	}
 
@@ -139,6 +145,13 @@ class C_kaizen extends CI_Controller {
         $data['implemented']  = $this->M_kaizen->implemented();
 		$this->load->view('kaizen_submit', $data);
 
+	}
+
+
+
+
+	public function coba_carousel(){
+		$this->load->view('coba_carousel');
 	}
 
 }

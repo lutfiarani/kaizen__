@@ -15,8 +15,7 @@
   <title>ELEMENTS</title>
 
   <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" /> -->
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/template/css/bootstrap.css" />
