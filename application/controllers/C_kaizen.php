@@ -36,7 +36,7 @@ class C_kaizen extends CI_Controller {
 			'jenis_hadiah'		=> $jenis_hadiah
 		);
         // $this->load->view('isi');
-        // $this->load->view('tentang_kami');
+        $this->load->view('tentang_kami');
 		$this->load->view('hadiah2', $hadiah); 
 		// $this->load->view('pemberian_hadiah'); //vanilla carousel, yang dipakai
 		// $this->load->view('cobagallery');
