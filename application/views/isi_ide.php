@@ -80,7 +80,7 @@
           
                 <!-- <textarea rows="15" cols="60" placeholder="Isi ide Anda di sini" id="ide" nama="ide" ></textarea> -->
                 <div id="ide"></div>
-                <div class="contact_form-container">
+                <div class="contact_form-container" style="margin-top:20px">
                 <button type="button" id="submit_data">
                       send
                     </button>
@@ -114,7 +114,7 @@
       $('#ide').summernote({
         placeholder: 'Isi ide Anda di sinisi',
         tabsize: 2,
-        height: 250,
+        height: 280,
         toolbar: [
           ['style', ['bold', 'italic', 'underline', 'clear']],
           ['font', ['strikethrough', 'superscript', 'subscript']],
