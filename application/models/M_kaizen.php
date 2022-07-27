@@ -158,4 +158,20 @@ class M_kaizen extends CI_Model {
         FROM T_IDEKU_IMPLEMENT");
         return $query->result_array();
     }
+
+
+    function get_pemberian_hadiah(){
+        $query = $this->db->query("
+            select * from kaizen_pemberian_hadiah where aktif = 'Y' order by diupdate desc
+        ");
+        return $query;
+    }
+
+    function get_jenis_hadiah(){
+        $query = $this->db->query("
+            select * from kaizen_jenis_hadiah where aktif = 'Y' order by diupdate desc
+        ");
+        return $query;
+    }
+
 }

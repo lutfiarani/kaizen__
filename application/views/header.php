@@ -15,8 +15,7 @@
   <title>ELEMENTS</title>
 
   <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" /> -->
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/template/css/bootstrap.css" />
@@ -61,7 +60,7 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex mx-auto flex-column flex-lg-row align-items-right">
+            <div class="d-flex  flex-column flex-lg-row align-items-right" style="margin-left: auto !important;">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
                   <a class="nav-link" href="<?php echo base_url();?>/template/index.html">Beranda <span class="sr-only">(current)</span></a>

@@ -1,3 +1,12 @@
+<!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"> -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+
+<style>
+.note-group-select-from-files {
+  display: none;
+}
+</style>
+
 <section class="contact_section layout_padding-bottom">
     <div class="container">
       <!-- <div class="d-flex flex-column align-items-end">
@@ -58,17 +67,24 @@
                         
                     </select>
                   </div>
-                  <div class="mt-5">
+                  <!-- <div class="mt-5">
                     <button type="button" id="submit_data">
                       send
                     </button>
-                  </div>
+                  </div> -->
                 </div>
 
               </div>
           </div>
           <div class="col-md-5">
-                <textarea rows="15" cols="60" placeholder="Isi ide Anda di sini" id="ide" nama="ide" ></textarea>
+          
+                <!-- <textarea rows="15" cols="60" placeholder="Isi ide Anda di sini" id="ide" nama="ide" ></textarea> -->
+                <div id="ide"></div>
+                <div class="contact_form-container" style="margin-top:20px">
+                <button type="button" id="submit_data">
+                      send
+                    </button>
+                  </div>
           </div>
           
         </div>
@@ -89,7 +105,27 @@
     </div>
   </section>
 
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+
   <script>
+    $(document).ready(function() {
+      $('#ide').summernote({
+        placeholder: 'Isi ide Anda di sinisi',
+        tabsize: 2,
+        height: 280,
+        toolbar: [
+          ['style', ['bold', 'italic', 'underline', 'clear']],
+          ['font', ['strikethrough', 'superscript', 'subscript']],
+          ['fontsize', ['fontsize']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['height', ['height']]
+        ]
+      });
+    });
+
     $( "#nik" ).change(function() {
       $.ajax({
             url : "<?php echo site_url('C_kaizen/ceknik/'); ?>"+$('#nik').val(),
@@ -146,7 +182,9 @@
       var cell      = $('#cell').val()
       var bagian    = $('#bagian').val()
       var kategori  = $('#kategori').val()
-      var ide       = $('#ide').val()
+      var ide       =  $('#ide').summernote('code');
+      
+      // console.log(ide)
 
        $.ajax({
             url : "<?php echo site_url('C_kaizen/simpan_ide'); ?>",
