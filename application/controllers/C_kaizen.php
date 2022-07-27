@@ -135,7 +135,13 @@ class C_kaizen extends CI_Controller {
 	{
 		$this->load->view('header');
         $data['implemented']  = $this->M_kaizen->implemented();
+		$data['kaizen_submit']  = $this->M_kaizen->implemented();
 		$this->load->view('kaizen_implemented', $data);
+		// $aa['implemented']  = $this->M_kaizen->implemented();
+		// $this->load->view('kaizen_submit', $aa);
+		// print("<pre>".print_r($data,true)."</pre>");
+		// print_r($data);
+		// var_dump($data);
 
 	}
 
