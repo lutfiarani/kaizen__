@@ -3,7 +3,7 @@
   <link rel="stylesheet" href="<?php echo base_url() ?>assets/owl-carousel/carousel-custom.css" />
  
   <!-- TESTIMONIALS -->
-  <section class="testimonials">
+  <section class="testimonials" style="padding-top:45px">
     <div class="container">
  
       <div class="row">

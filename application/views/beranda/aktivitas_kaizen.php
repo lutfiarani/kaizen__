@@ -3,6 +3,21 @@
     position: relative;
     margin: 0px;
 }
+.portfolio_section .img-box::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: rgba(37, 28, 229, 0.8);
+    opacity: 0%;
+    border-radius: 25px;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+}
 </style>
 <section class="portfolio_section">
     <div class="container">
@@ -19,10 +34,7 @@
            
             <div class="img-box">
               <img src="<?php echo base_url();?>/template/images/p-1.jpg" alt="">
-              <a href="">
-                <img src="<?php echo base_url();?>/template/images/link.png" alt="">
-               
-              </a>
+              
             </div>
             
           </div>
@@ -36,10 +48,7 @@
            
             <div class="img-box">
               <img src="<?php echo base_url();?>/template/images/p-1.jpg" alt="">
-              <a href="">
-                <img src="<?php echo base_url();?>/template/images/link.png" alt="">
-               
-              </a>
+              
             </div>
             
           </div>
@@ -69,10 +78,7 @@
            
             <div class="img-box">
               <img src="<?php echo base_url();?>/template/images/p-1.jpg" alt="">
-              <a href="">
-                <img src="<?php echo base_url();?>/template/images/link.png" alt="">
-               
-              </a>
+              
             </div>
             
           </div>
@@ -88,10 +94,7 @@
            
             <div class="img-box">
               <img src="<?php echo base_url();?>/template/images/p-1.jpg" alt="">
-              <a href="">
-                <img src="<?php echo base_url();?>/template/images/link.png" alt="">
-               
-              </a>
+              
             </div>
             
           </div>
@@ -103,10 +106,6 @@
            
             <div class="img-box">
               <img src="<?php echo base_url();?>/template/images/p-1.jpg" alt="">
-              <a href="">
-                <img src="<?php echo base_url();?>/template/images/link.png" alt="">
-               
-              </a>
             </div>
             
           </div>
@@ -122,10 +121,7 @@
            
             <div class="img-box">
               <img src="<?php echo base_url();?>/template/images/p-1.jpg" alt="">
-              <a href="">
-                <img src="<?php echo base_url();?>/template/images/link.png" alt="">
-               
-              </a>
+              
             </div>
             
           </div>
