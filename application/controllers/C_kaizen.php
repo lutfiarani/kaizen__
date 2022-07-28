@@ -42,7 +42,7 @@ class C_kaizen extends CI_Controller {
 		$this->load->view('beranda/hadiah2', $hadiah); 
 		$data['gedung']  = $this->M_kaizen->gedung();
 		$this->load->view('beranda/isi_ide', $data);
-		// $this->load->view('footer');
+		$this->load->view('beranda/footer');
 
 	}
 
