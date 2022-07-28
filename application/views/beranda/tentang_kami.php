@@ -1,4 +1,4 @@
-<section class="news_section layout_padding img" style="background-repeat-y: no-repeat;">
+<section class="news_section layout_padding img" style="background-repeat-y: no-repeat;" id="toTentangKami">
     <div class="container">
       
       <div class="row">

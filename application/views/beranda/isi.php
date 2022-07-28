@@ -1,4 +1,13 @@
 <!-- slider section -->
+<style>
+#toTop {
+    padding: 5px 3px;
+    position: fixed;
+    bottom: 0;
+    right: 5px;
+    display: none;
+}
+  </style>
     <section class=" slider_section position-relative">
 
       <div class="slider_bg-container">
@@ -60,5 +69,36 @@
   </div>
 
   <a href="#keIsiIde" class="click">Click this to scroll to element 2!</a><br />
+  <a href="#toTentangKami" class="click">Click this to scroll to element 2!</a><br />
+  <div id='toTop'><img src="<?php echo base_url() ?>assets/scroll-up2.png" width="50px"></div>
+  <!-- <a href="#toTentangKami" class="click">Click this to scroll to element 2!</a><br /> -->
 
+
+  <script>
+    $(window).scroll(function() {
+        if ($(this).scrollTop()) {
+            $('#toTop').fadeIn();
+        } else {
+            $('#toTop').fadeOut();
+        }
+    });
+
+    $("#toTop").click(function () {
+      $("html, body").animate({scrollTop: 0}, 1000);
+    });
+
+    // scroll to isi Ide
+    $('.click').click(function(e){
+      e.preventDefault();
+      scrollToElement( $(this).attr('href'), 1000 );
+    });
+
+    var scrollToElement = function(el, ms){
+        var speed = (ms) ? ms : 600;
+        $('html,body').animate({
+            scrollTop: $(el).offset().top
+        }, speed);
+    }
+    // akhir scroll to isi Ide
+  </script>
   

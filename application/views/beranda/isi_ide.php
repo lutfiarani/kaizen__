@@ -126,19 +126,7 @@
       });
     });
 
-    // scroll to isi Ide
-    $('.click').click(function(e){
-      e.preventDefault();
-      scrollToElement( $(this).attr('href'), 1000 );
-    });
-
-    var scrollToElement = function(el, ms){
-        var speed = (ms) ? ms : 600;
-        $('html,body').animate({
-            scrollTop: $(el).offset().top
-        }, speed);
-    }
-    // akhir scroll to isi Ide
+    
 
     $( "#nik" ).change(function() {
       $.ajax({
