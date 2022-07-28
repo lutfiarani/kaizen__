@@ -14,7 +14,7 @@
   height:20px; */
   /* background: url('images/scrollUp.png'); */
   position:fixed;
-  top:95%;
+  top:93%;
   background:#da0101;
   color:#ffffff;
   z-index: 999;
@@ -80,10 +80,10 @@
     $(window).scroll(function() {
         if ($(this).scrollTop()) {
             $('#toTop').fadeIn();
-            // $('#arrow').fadeOut();
+            // $('#previous').fadeOut();
         } else {
             $('#toTop').fadeOut();
-            // $('#arrow').fadeIn();
+            $('#previous').fadeOut();
         }
     });
 
