@@ -48,7 +48,7 @@
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="<?php echo base_url();?>/template/index.html">
+          <a class="navbar-brand" >
             <img src="<?php echo base_url();?>/template/images/hwi_2.png" alt="">
             <span>
               KaizenKU
@@ -63,38 +63,30 @@
             <div class="d-flex  flex-column flex-lg-row align-items-right" style="margin-left: auto !important;">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="<?php echo base_url();?>/template/index.html">Beranda <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="<?php echo base_url();?>">Beranda <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="<?php echo base_url();?>/template/about.html">Status </a>
+                  <a class="nav-link" href="<?php echo base_url();?>c_kaizen/taget_kaizen_implemented">Status </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="<?php echo base_url();?>/template/service.html">Login Admin </a>
+                  <a class="nav-link" href="<?php echo base_url();?>login">Login Admin </a>
                 </li>
                 
               </ul>
             </div>
-            <!-- <div class="quote_btn-container  d-flex justify-content-right">
-              <a href="<?php echo base_url();?>/template/">
-                <img src="<?php echo base_url();?>/template/images/call.png" alt="">
-                CALL : +01 1234567890
-              </a>
-              <a href="<?php echo base_url();?>/template/">
-                <span>
-                  @
-                </span>
-                demo@gmail.com
-              </a>
-            </div> -->
           </div>
         </nav>
       </div>
     </header>
     <!-- end header section -->
-    
+</div>
 
-  <script type="text/javascript" src="<?php echo base_url();?>/template/js/jquery-3.4.1.min.js"></script>
+  <!-- <script type="text/javascript" src="<?php echo base_url();?>/template/js/jquery-3.4.1.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
   <script type="text/javascript" src="<?php echo base_url();?>/template/js/bootstrap.js"></script>
+  
 
 </body>
 </body>

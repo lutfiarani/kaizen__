@@ -7,7 +7,7 @@
 }
 </style>
 
-<section class="contact_section layout_padding-bottom">
+<section class="contact_section layout_padding-bottom" id="keIsiIde" >
     <div class="container">
       <!-- <div class="d-flex flex-column align-items-end">
         <div class="custom_heading-container">
@@ -89,7 +89,8 @@
           
         </div>
         <br>
-        <div class="h-50 d-inline-block" style="width: 600px; background-color: rgba(255,255,153)">
+        <!-- <div class="col-sm-12"> -->
+        <div class="h-50 d-inline-block" style=" background-color: rgba(255,255,153)">
                             <p><u>Petunjuk Pengisian</u></p>
                             1. ketik NIK, otomatis Nama, Jabatan, Geudng, Bagian akan terisi<br>
                             2. Klik tanda panah di kolom cell, pilih cell<br>
@@ -97,7 +98,8 @@
                             4. Ketik idemu</br>
                             5. Klik tombol kirim</br>
         </div>
-          </div>
+                          </div>
+          <!-- </div> -->
           
         </div>
       </div>
@@ -105,8 +107,8 @@
     </div>
   </section>
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
   <script>
@@ -125,6 +127,8 @@
         ]
       });
     });
+
+    
 
     $( "#nik" ).change(function() {
       $.ajax({
