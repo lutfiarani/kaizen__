@@ -7,7 +7,7 @@
 }
 </style>
 
-<section class="contact_section layout_padding-bottom" id="keIsiIde">
+<section class="contact_section layout_padding-bottom" id="keIsiIde" >
     <div class="container">
       <!-- <div class="d-flex flex-column align-items-end">
         <div class="custom_heading-container">
@@ -89,7 +89,8 @@
           
         </div>
         <br>
-        <div class="h-50 d-inline-block" style="width: 600px; background-color: rgba(255,255,153)">
+        <!-- <div class="col-sm-12"> -->
+        <div class="h-50 d-inline-block" style=" background-color: rgba(255,255,153)">
                             <p><u>Petunjuk Pengisian</u></p>
                             1. ketik NIK, otomatis Nama, Jabatan, Geudng, Bagian akan terisi<br>
                             2. Klik tanda panah di kolom cell, pilih cell<br>
@@ -97,7 +98,8 @@
                             4. Ketik idemu</br>
                             5. Klik tombol kirim</br>
         </div>
-          </div>
+                          </div>
+          <!-- </div> -->
           
         </div>
       </div>

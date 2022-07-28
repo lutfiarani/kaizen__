@@ -48,7 +48,7 @@
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" >
+          <a class="navbar-brand" href="<?php echo base_url();?>/template/index.html">
             <img src="<?php echo base_url();?>/template/images/hwi_2.png" alt="">
             <span>
               KaizenKU
@@ -74,6 +74,18 @@
                 
               </ul>
             </div>
+            <!-- <div class="quote_btn-container  d-flex justify-content-right">
+              <a href="<?php echo base_url();?>/template/">
+                <img src="<?php echo base_url();?>/template/images/call.png" alt="">
+                CALL : +01 1234567890
+              </a>
+              <a href="<?php echo base_url();?>/template/">
+                <span>
+                  @
+                </span>
+                demo@gmail.com
+              </a>
+            </div> -->
           </div>
         </nav>
       </div>
@@ -83,10 +95,9 @@
 
   <!-- <script type="text/javascript" src="<?php echo base_url();?>/template/js/jquery-3.4.1.min.js"></script> -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script> -->
   <script type="text/javascript" src="<?php echo base_url();?>/template/js/bootstrap.js"></script>
-  
 
 </body>
 </body>
