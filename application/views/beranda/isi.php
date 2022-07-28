@@ -6,6 +6,7 @@
     bottom: 0;
     right: 5px;
     display: none;
+    z-index: 999;
 }
 
 #arrow {
@@ -15,7 +16,8 @@
   position:fixed;
   top:95%;
   background:#da0101;
-  color:#ffffff
+  color:#ffffff;
+  z-index: 999;
   /* margin-left: 1010px; */
 }
 #arrow a{
