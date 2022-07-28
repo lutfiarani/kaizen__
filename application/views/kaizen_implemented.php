@@ -4,7 +4,7 @@
 <script src="<?php echo base_url();?>template/highcharts/export-data.js"></script>
 <script src="<?php echo base_url();?>template/highcharts/accessibility.js"></script>
 
-<div class="div-1" style=" height=100%; text-align:center; ">
+<div class="div-1" style=" height:100%; text-align:center; ">
     <br>
     <span style=" padding : 10px;background-color:#F499CF; font-size:20pt; font-weight:bold; margin-top:100px">Target Kaizen 2022</span>
 
@@ -62,7 +62,7 @@
         <span style=" padding : 10px;background-color:#F499CF; font-size:20pt; font-weight:bold; ">Target Kaizen 2022</span>
     </div>
 
-    <div class="row">
+    <div class="row" style="background:#1B5EA9">
     
         <div class="col-md-6">
             <h3 style="color:White;"><center>Summary Kaizen Idea Submit</center></h3>
@@ -87,6 +87,7 @@
     </div>
 
 </div>
+
 <script>
 
 
