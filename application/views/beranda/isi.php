@@ -1,51 +1,189 @@
-<!-- slider section -->
-<style>
-#toTop {
-    padding: 5px 3px;
-    position: fixed;
-    bottom: 0;
-    right: 5px;
-    display: none;
-    z-index: 999;
-}
 
-#arrow {
-  /* width:20px;
-  height:20px; */
-  /* background: url('images/scrollUp.png'); */
-  position:fixed;
-  top:93%;
-  background:#da0101;
-  color:#ffffff;
-  z-index: 999;
-  /* margin-left: 1010px; */
-}
-#arrow a{
-    display:inline-block;
-    padding:10px 20px;
-    cursor:pointer;
-}
-  </style>
+    <style>
+    #toTop {
+        padding: 5px 3px;
+        position: fixed;
+        bottom: 0;
+        right: 5px;
+        display: none;
+        z-index: 999;
+    }
+
+    #arrow {
+      /* width:20px;
+      height:20px; */
+      /* background: url('images/scrollUp.png'); */
+      position:fixed;
+      top:93%;
+      background:#da0101;
+      color:#ffffff;
+      z-index: 999;
+      /* margin-left: 1010px; */
+    }
+
+    #arrow a{
+        display:inline-block;
+        padding:10px 20px;
+        cursor:pointer;
+    }
+
+    #bunder{
+      width: auto;
+      height: 15em;
+      border-radius: 50%;
+      background-color: #394ab3;
+      border: 40px solid white;
+      box-shadow: 0 0 0 5px #394ab3;
+    }
+
+    #outer-circle {
+      background: #385a94;
+      border-radius: 50%;
+      height: 15em;
+      width: auto;
+      position: relative;
+    }
+
+    #inner-circle {
+      position: absolute;
+      background: #a9aaab;
+      border-radius: 50%;
+      height: 10em;
+      width: auto;
+      top: 50%;
+      left: 50%;
+      margin: -150px 0px 0px -150px;
+    }
+    </style>
     <section class=" slider_section position-relative">
 
       <div class="slider_bg-container">
       </div>
       <div class="slider-container">
 
-        <div class="detail-box">
-          <!-- <p> -->
+        <!-- <div class="detail-box">
           <div class="img-box">
             <div class="container">
                 <img src="<?php echo base_url();?>/template/images/cobalah2.png" alt="">
-                <div class="bottom-left">678</div>
+                <div class="bottom-left"><button class="0">678</button></div>
                 <div class="top-left">313</div>
                 <div class="top-right">99999</div>
                 <div class="bottom-right">105253</div>
                 <div class="centered"><a href="#keIsiIde" class="click">Centered</a><br /></div>
+
+                      
             </div>
           </div>
+        </div> -->
+        <div class="detail-box" >
+          
+          
+        <div class="layout_padding2-top">
+          <div class="row" >
+            <div class="col-sm-4" style="padding: 0px">
+            
+              <div class="img-box" style="background:#394ab3; width:100%">
+                <div class="card text-white">
+                  <div class="card-header" style="font-size:12px; text-align:center; background:#394ab3">Ide Terkirim Hari Ini</div>
+                  <div class="card-body text-white" style="text-align:center; background:#394ab3"><center><h1>99</h1></center></div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="col-sm-4" style="padding: 0px">
+            <!-- <div class="img-box" style="background:#394ab3">
+                <div class="card text-white">
+                  <div class="card-header" style="font-size:12px; text-align:center; background:#394ab3">Ide Terkirim Hari Ini</div>
+                  <div class="card-body text-white" style="text-align:center; background:#394ab3"><center><h1>99</h1></center></div>
+                </div>
+              </div> -->
+            </div>
+            <div class="col-sm-4" style="padding: 0px">
+              <div class="img-box" style="background:#394ab3; width:100%">
+                <div class="card text-white">
+                  <div class="card-header " style="font-size:12px; text-align:center; background:#394ab3">Ide Terkirim 2022</div>
+                  <div class="card-body text-white" style="text-align:center; background:#394ab3"><center><h1>999</h1></center></div>
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
+
+
+
+          <div class="row">
+            <div class="col-sm-4" style="padding: 15px">
+            
+              <div class="img-box">
+                 
+              </div>
+              
+            </div>
+            <div class="col-sm-4" style="padding: 0px">
+            
+              <div class="img-box" style=" width:100%">
+                <!-- <div class="card text-white rounded-circle">
+                  <div class="card-header " style="font-size:12px; text-align:center; background:#394ab3">Kirim Ide</div>
+                  <div class="card-body text-white" style="text-align:center; background:#394ab3"><center><h1>99</h1></center></div>
+                </div> -->
+                <div id="bunder"></div>
+                <!-- <div id="outer-circle">
+  <div id="inner-circle">
+
+  </div>
+</div> -->
+              </div>
+              <!-- <div class="circle circle-lg">
+  <img src="..." class="w-h-100" alt="...">
+</div> -->
+              
+            </div>
+            <div class="col-sm-4" style="padding: 15px">
+            
+            <div class="img-box">
+                  
+              </div>
+              
+            </div>
+          </div>
+
+
+          <div class="row" >
+            <div class="col-sm-4" style="padding: 0px">
+              
+              <div class="img-box" style="background:#394ab3; width:100%">
+                <div class="card text-white">
+                  <div class="card-header " style="font-size:12px; text-align:center; background:#394ab3">Karyawan Kirim Ide</div>
+                  <div class="card-body text-white" style="text-align:center; background:#394ab3"><center><h1>313</h1></center></div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="col-sm-4" style="padding: 15px">
+            
+              <div class="img-box">
+              </div>
+              
+            </div>
+            <div class="col-sm-4" style="padding: 0px">
+            
+              <div class="img-box" style="background:#394ab3; width:100%">
+                <div class="card text-white">
+                  <div class="card-header " style="font-size:12px; text-align:center; background:#394ab3">Implemented</div>
+                  <div class="card-body text-white" style="text-align:center; background:#394ab3"><center><h1>678</h1></center></div>
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
         </div>
-        <div class="img-box">
+
+
+        </div>
+
+        <div class="img-box" style="margin-left:0">
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
