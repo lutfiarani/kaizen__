@@ -10,15 +10,11 @@
     }
 
     #arrow {
-      /* width:20px;
-      height:20px; */
-      /* background: url('images/scrollUp.png'); */
       position:fixed;
       top:93%;
       background:#da0101;
       color:#ffffff;
       z-index: 999;
-      /* margin-left: 1010px; */
     }
 
     #arrow a{
@@ -40,24 +36,22 @@
      
     }
 
-    /* #outer-circle {
-      background: #385a94;
-      border-radius: 50%;
-      height: 15em;
-      width: auto;
-      position: relative;
+    .card-header:first-child{
+      border-radius: 30px 30px 0px 0px;
     }
 
-    #inner-circle {
-      position: absolute;
-      background: #a9aaab;
-      border-radius: 50%;
-      height: 10em;
-      width: auto;
-      top: 50%;
-      left: 50%;
-      margin: -150px 0px 0px -150px;
-    } */
+    .card-body{
+      border-radius: 0px 0px 30px 30px;
+    }
+
+    .card{
+      border:0px
+    }
+
+    .slider_section .detail-box{
+      background:white
+    }
+
     </style>
     <section class=" slider_section position-relative">
 
@@ -82,31 +76,30 @@
         <div class="detail-box" >
           
           
-        <div class="layout_padding2-top">
+        <div class="layout_padding2-top" style="padding-top:0px">
           <div class="row" >
             <div class="col-sm-4" style="padding: 0px">
-            
-              <div class="img-box" style="background:#394ab3; width:100%">
+              
+              <div class="img-box" style=" width:100%">
                 <div class="card text-white">
-                  <div class="card-header" style="font-size:12px; text-align:center; background:#394ab3">Ide Terkirim Hari Ini</div>
-                  <div class="card-body text-white" style="text-align:center; background:#394ab3"><center><h1>99</h1></center></div>
+                  <div class="card-header " style="font-size:12px; text-align:center; background:#394ab3">Karyawan Kirim Ide</div>
+                  <div class="card-body text-white" style="text-align:center; background:#394ab3"><center><h1>313</h1></center></div>
                 </div>
               </div>
               
             </div>
-            <div class="col-sm-4" style="padding: 0px">
-            <!-- <div class="img-box" style="background:#394ab3">
-                <div class="card text-white">
-                  <div class="card-header" style="font-size:12px; text-align:center; background:#394ab3">Ide Terkirim Hari Ini</div>
-                  <div class="card-body text-white" style="text-align:center; background:#394ab3"><center><h1>99</h1></center></div>
-                </div>
-              </div> -->
+            <div class="col-sm-4" style="padding: 15px">
+            
+              <div class="img-box">
+              </div>
+              
             </div>
             <div class="col-sm-4" style="padding: 0px">
-              <div class="img-box" style="background:#394ab3; width:100%">
+            
+              <div class="img-box" style=" width:100%">
                 <div class="card text-white">
-                  <div class="card-header " style="font-size:12px; text-align:center; background:#394ab3">Ide Terkirim 2022</div>
-                  <div class="card-body text-white" style="text-align:center; background:#394ab3"><center><h1>999</h1></center></div>
+                  <div class="card-header " style="font-size:12px; text-align:center; background:#394ab3">Implemented</div>
+                  <div class="card-body text-white" style="text-align:center; background:#394ab3"><center><h1>678</h1></center></div>
                 </div>
               </div>
               
@@ -126,9 +119,9 @@
             </div>
             <div class="col-sm-4" style="padding: 0px">
             
-              <div class="img-box" style=" width:100%">
+              <div class="img-box" style=" width:100%; cursor: pointer;" >
 
-                <div id="bunder" class="click" href="#keIsiIde"><p style="font-size:40px">Isi Ide</h3></div>
+                <div id="bunder" class="click" href="#keIsiIde"><p style="font-size:30px; text-align:center; padding-left:30px">Isi Ide</p></div>
               </div>
             </div>
             <div class="col-sm-4" style="padding: 15px">
@@ -144,7 +137,7 @@
           <div class="row" >
             <div class="col-sm-4" style="padding: 0px">
               
-              <div class="img-box" style="background:#394ab3; width:100%">
+              <div class="img-box" style=" width:100%">
                 <div class="card text-white">
                   <div class="card-header " style="font-size:12px; text-align:center; background:#394ab3">Karyawan Kirim Ide</div>
                   <div class="card-body text-white" style="text-align:center; background:#394ab3"><center><h1>313</h1></center></div>
@@ -160,7 +153,7 @@
             </div>
             <div class="col-sm-4" style="padding: 0px">
             
-              <div class="img-box" style="background:#394ab3; width:100%">
+              <div class="img-box" style=" width:100%">
                 <div class="card text-white">
                   <div class="card-header " style="font-size:12px; text-align:center; background:#394ab3">Implemented</div>
                   <div class="card-body text-white" style="text-align:center; background:#394ab3"><center><h1>678</h1></center></div>
