@@ -63,13 +63,13 @@
             <div class="d-flex  flex-column flex-lg-row align-items-right" style="margin-left: auto !important;">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="<?php echo base_url();?>/template/index.html">Beranda <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="<?php echo base_url();?>">Beranda <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="<?php echo base_url();?>/template/about.html">Status </a>
+                  <a class="nav-link" href="<?php echo base_url();?>c_kaizen/taget_kaizen_implemented">Status </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="<?php echo base_url();?>/template/service.html">Login Admin </a>
+                  <a class="nav-link" href="<?php echo base_url();?>login">Login Admin </a>
                 </li>
                 
               </ul>
