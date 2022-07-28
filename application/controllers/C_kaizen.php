@@ -161,4 +161,9 @@ class C_kaizen extends CI_Controller {
 		$this->load->view('coba_carousel');
 	}
 
+	function cobalagi(){
+		$this->load->view('header');
+		$this->load->view('beranda/isi');
+	}
+
 }
