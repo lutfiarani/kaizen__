@@ -34,9 +34,13 @@
       background-color: #394ab3;
       border: 40px solid white;
       box-shadow: 0 0 0 5px #394ab3;
+      text-align:center;
+      line-height:8em;
+      /* text-align: center; */
+     
     }
 
-    #outer-circle {
+    /* #outer-circle {
       background: #385a94;
       border-radius: 50%;
       height: 15em;
@@ -53,7 +57,7 @@
       top: 50%;
       left: 50%;
       margin: -150px 0px 0px -150px;
-    }
+    } */
     </style>
     <section class=" slider_section position-relative">
 
@@ -123,21 +127,9 @@
             <div class="col-sm-4" style="padding: 0px">
             
               <div class="img-box" style=" width:100%">
-                <!-- <div class="card text-white rounded-circle">
-                  <div class="card-header " style="font-size:12px; text-align:center; background:#394ab3">Kirim Ide</div>
-                  <div class="card-body text-white" style="text-align:center; background:#394ab3"><center><h1>99</h1></center></div>
-                </div> -->
-                <div id="bunder"></div>
-                <!-- <div id="outer-circle">
-  <div id="inner-circle">
 
-  </div>
-</div> -->
+                <div id="bunder" class="click" href="#keIsiIde"><p style="font-size:40px">Isi Ide</h3></div>
               </div>
-              <!-- <div class="circle circle-lg">
-  <img src="..." class="w-h-100" alt="...">
-</div> -->
-              
             </div>
             <div class="col-sm-4" style="padding: 15px">
             
