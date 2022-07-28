@@ -7,7 +7,7 @@
 }
 </style>
 
-<section class="contact_section layout_padding-bottom">
+<section class="contact_section layout_padding-bottom" id="keIsiIde">
     <div class="container">
       <!-- <div class="d-flex flex-column align-items-end">
         <div class="custom_heading-container">
@@ -125,6 +125,20 @@
         ]
       });
     });
+
+    // scroll to isi Ide
+    $('.click').click(function(e){
+      e.preventDefault();
+      scrollToElement( $(this).attr('href'), 1000 );
+    });
+
+    var scrollToElement = function(el, ms){
+        var speed = (ms) ? ms : 600;
+        $('html,body').animate({
+            scrollTop: $(el).offset().top
+        }, speed);
+    }
+    // akhir scroll to isi Ide
 
     $( "#nik" ).change(function() {
       $.ajax({

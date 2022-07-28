@@ -59,4 +59,6 @@
     <!-- end slider section -->
   </div>
 
+  <a href="#keIsiIde" class="click">Click this to scroll to element 2!</a><br />
+
   
