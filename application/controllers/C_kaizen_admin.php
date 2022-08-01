@@ -47,54 +47,6 @@ class C_kaizen_admin extends CI_Controller {
 
 	}
 
-	public function cari_ide(){
-		$data = $this->M_kaizen->cari_ide()->result();
-		echo json_encode($data);
-	}
-
-	public function export_excel(){
-		$tanggal = date('Ymd');
-		$fileName = 'employee-'.$tanggal.'.xlsx';  
-		$employeeData = $this->M_kaizen->cari_ide()->result_array();
-		$spreadsheet = new Spreadsheet();
-        $sheet = $spreadsheet->getActiveSheet();
-       	$sheet->setCellValue('A1', 'No');
-        $sheet->setCellValue('B1', 'NIK');
-        $sheet->setCellValue('C1', 'NAMA');
-        $sheet->setCellValue('D1', 'JABATAN');
-		$sheet->setCellValue('E1', 'FACTORY');
-        $sheet->setCellValue('F1', 'DEPT');       
-		$sheet->setCellValue('G1', 'CELL'); 
-		$sheet->setCellValue('H1', 'IDE'); 
-		$sheet->setCellValue('I1', 'ACTION'); 
-		
-        $rows = 2;
-		// $i = 0;
-		for ($i=0 ; $i<count($employeeData); $i++){
-			$val = $employeeData[$i];
-			$sheet->setCellValue('A' . $rows, $i);
-            $sheet->setCellValue('B' . $rows, $val['NIK']);
-            $sheet->setCellValue('C' . $rows, $val['NAME']);
-            $sheet->setCellValue('D' . $rows, $val['JABATAN']);
-	    	$sheet->setCellValue('E' . $rows, $val['FACTORY']);
-            $sheet->setCellValue('F' . $rows, $val['DEPT']);
-			$sheet->setCellValue('G' . $rows, $val['LOCATION']);
-			$sheet->setCellValue('H' . $rows, $val['IDE']);
-			$sheet->setCellValue('I' . $rows, $val['ACTION']);
-            $rows++;
-		}
-		
-        $writer = new Xlsx($spreadsheet);
-		$writer->save("upload/".$fileName);
-
-		header("Content-Disposition: attachment; filename=\"$fileName\""); 
-		header("Content-Type: application/vnd.ms-excel");
-		// $writer->save('php://output');
-		// exit();
-        redirect(base_url()."/upload/".$fileName);              
-        
-	}
-
 	public function welcoming_page()
 	{
 		$this->load->view('admin/template_admin');
@@ -107,4 +59,30 @@ class C_kaizen_admin extends CI_Controller {
         $data = $this->M_kaizen_admin->welcome();
         echo json_encode($data);
     }
+
+	public function edit_desc(){
+		$data = $this->M_kaizen_admin->edit_desc();
+		echo json_encode($data);
+
+	}
+
+	public function upload_image(){
+        $config['upload_path']="./template/images/welcoming_page";
+        $config['allowed_types']='gif|jpg|png';
+
+        $this->load->library('upload',$config);
+
+        if($this->upload->do_upload("file")){
+			$data = array('upload_data' => $this->upload->data());
+			$img_id = $this->input->post('img_id');
+			$imgpath = $data['upload_data']['file_name'];
+			
+
+			$result= $this->M_kaizen_admin->upload_image($img_id, $imgpath);
+			if ($result == TRUE) {
+				echo "true";
+			}
+        }
+
+	}
 }

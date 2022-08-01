@@ -38,7 +38,21 @@ class M_kaizen_admin extends CI_Model {
 
     public function welcome(){
         $query = $this->db->query("SELECT * FROM KAIZEN_WELCOME");
-        return $query->result();
+        return $query->result_array();
+    }
+
+    public function edit_desc(){
+        $desc = $this->input->post('desc');
+        $id   =  $this->input->post('id');
+
+        $query = ("UPDATE KAIZEN_WELCOME
+                                    SET IMG_DESC = '$desc'
+                                    , UPDATED_AT = GETDATE()
+                                    WHERE IMG_ID = '$id'
+            ");
+        $run = $this->db->query($query);
+        return $query;
+        // echo $query;
     }
 
     public function gedung(){
@@ -177,6 +191,17 @@ class M_kaizen_admin extends CI_Model {
             select * from kaizen_jenis_hadiah where aktif = 'Y' order by diupdate desc
         ");
         return $query;
+    }
+
+    public function upload_image($img_id, $imgpath){
+        $query = ("UPDATE KAIZEN_WELCOME
+                        SET IMG = '$imgpath'
+                        WHERE IMG_ID = $img_id
+        ");
+
+        $run  = $this->db->query($query);
+        return $run;
+        // echo $query;
     }
 
 }

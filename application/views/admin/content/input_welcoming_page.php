@@ -58,11 +58,34 @@
                             </tr>
                         </thead>
                         <tbody id="welcome">
-                           
+                           <!-- <?php
+                                // $url =  base_url('template/images/welcoming_page');
+                                // for($i=0; $i<count($data); $i++){
+                                //     $datas = $data[$i];
+                                //     echo '<tr>
+                                //             <td>'.($i+1).'</td>
+                                //             <td><img src="'.$url.'/'.$datas['IMG'].'" width="375" height="271" id="img1"></img>
+                                //                   <br>
+                                                  
+                                //                   <form method="post" id="upload_img_welcome" enctype="multipart/form-data">
+                                                    
+                                //                       <label class="form-label" for="customFile">Default file input example</label>
+                                //                       <input type="file" class="form-control" id="customFile" accept="image/png, image/gif, image/jpeg"/>
+                                                   
+                                //                     <input type="submit" class="btn btn-cyan" id="upload_img"></input>
+                                //                   </form> 
+                                //             </td>
+                                //             <td><textarea class="form-control" id="floatingTextarea2" style="height: 325px; width:800px">'.$datas['IMG_DESC'].'</textarea>
+                                //                         <button type="button" class="btn btn-cyan" id="desc_welcome">Save Changes</button>
+                                //             </td>
+                                //             <td>'.$datas['UPDATED_AT'].'</td>
+                                //     ';
+                                // }
+                           ?> -->
                         </tbody>
                     </table>
                 </div>
-            
+              
         </div>
        
         <!-- Pie Chart -->
@@ -108,17 +131,17 @@
                         '<div id="img2">'+
                         '<br><br>'+
                         '<form method="post" id="upload_img_welcome" enctype="multipart/form-data">'+
-                            '<div class="custom-file">'+
-                                '<input type="file" class="custom-file-input" id="formFileLg" name="file" img_id='+datas.IMG_ID+' accept="image/png, image/gif, image/jpeg">'+
-                                '<label class="custom-file-label" for="formFileLg">Choose File </label>'+
-                            '</div>'+
+                            
+                                '<input type="file" class="form-control" id="file" name="file" accept="image/png, image/gif, image/jpeg">'+
+                                // '<label class="label-control" for="formFileLg">Choose File </label>'+
+                            '<input type="hidden" id="img_id" name="img_id" value='+datas.IMG_ID+'>'+
                             '<input type="submit" class="btn btn-cyan" id="upload_img"></input>'+
                         '</form>'+
                     '</td>'+
                     '<td scope="col"><div class="form-floating">'+
-                            '<textarea class="form-control" id="floatingTextarea2" style="height: 325px; width:800px">'+datas.IMG_DESC+'</textarea>'+
-                            '<label for="floatingTextarea2"></label>'+
-                            '<button type="button" class="btn btn-cyan" id="desc_welcome">Save Changes</button>'+
+                            '<textarea class="form-control cobaedit" id="deskripsi" data-id='+datas.IMG_ID+' name="deskripsi" style="height: 325px; width:800px">'+datas.IMG_DESC+'</textarea>'+
+                            
+                            '<button type="submit" class="btn btn-cyan" id="desc_welcome"  img_id='+datas.IMG_ID+'>Save Changes</button>'+
                             '</div>'+
                             
                             '</td>'+
@@ -132,94 +155,79 @@
         });
       }
 
-      function edit_ide(id, action){
-          var query  = $('#katakunci').val();
-          var dari   = $('#dari').val();
-          var sampai = $('#sampai').val();
+      function edit_desc(id, desc){
           $.ajax({
-              url:"<?php echo site_url('C_kaizen/edit_ide')?>",
+              url:"<?php echo site_url('C_kaizen_admin/edit_desc')?>",
               method:"POST",
-              data:{id:id, action:action},
+              data:{id:id, desc:desc},
               dataType : 'json',
               success:function(data)
               {
                 console.log(data);
-                load_data(query, dari, sampai);
+                // load_data();
               }
         });
-        }
+     }
 
-
-      $( "#cari_data" ).click(function() {
-            var query  = $('#katakunci').val();
-            var dari   = $('#dari').val();
-            var sampai = $('#sampai').val();
-            load_data(query, dari, sampai);
-
-          });
-
-      $( "#export_excel" ).click(function() {
-          var query  = $('#katakunci').val();
-          var dari   = $('#dari').val();
-          var sampai = $('#sampai').val();
-          
-          $.ajax({
-              url:"<?php echo site_url('C_kaizen/export_excel')?>",
-              method:"POST",
-              data:{query:query, dari:dari, sampai:sampai},
-              // dataType : 'json',
-              success:function(data)
-              {
-                console.log(data);
+    // $('#upload_img_welcome').on('submit', function(event){
+    //     var img_id   = $(this).attr("img_id");
+    //     event.preventDefault();
+    //     $.ajax({
+    //         url: "<?php echo site_url('C_kaizen_admin/upload_welcome')?>",
+    //         method:"POST",
+    //         data:new FormData(this),
+    //         contentType:false,
+    //         cache:false,
+    //         processData:false,
+    //         // beforeSend : function()
+    //         // {
                 
-              }
-          });
-            // alert('hai');
-        });
+    //         //     // $("#img1").hide();
+    //         //     $("#img2").fadeOut();
+    //         // },
+    //         success:function(data){
+    //             // $('#img_welcome').val('');
+    //            alert('hore') 
+    //             // load_data();
+                
+    //         }
+    //     })
+    // });
 
-        $( "#action_ide" ).click(function() {
-          var id    =   $(this).attr('id_ide');
-          var action    =   $('#action_ide').val();
-          edit_ide(id, action);
-
-        });
-
-        $('#upload_img_welcome').on('submit', function(event){
-                event.preventDefault();
-                $.ajax({
-                    url: "<?php echo site_url('C_kaizen_admin/upload_welcome')?>",
-                    method:"POST",
-                    data:new FormData(this),
-                    contentType:false,
-                    cache:false,
-                    processData:false,
-                    beforeSend : function()
-                    {
-                        
-                        // $("#img1").hide();
-                        $("#img2").fadeOut();
-                    },
-                    success:function(data){
-                        $('#img_welcome').val('');
-                        
-                        load_data();
-                        
-                    }
-                })
-          });
-          $('#formFileLg').on("change",function() {
-        console.log("change fire");
-        var i = $(this).prev('label').clone();
-        var file = $('#formFileLg')[0].files[0].name;
-        console.log(file);
-        $(this).prev('label').text(file);
-
-        });
+        
   $(document).ready(function(){
 	
     load_data();
 
-   
+    $(document).on('click','#desc_welcome',function(){
+          var desc  = $('#deskripsi').val();
+          var id   = $(this).attr("img_id");
+        
+          edit_desc(id, desc);
+          load_data();
+        });
+    });
+
+
+    $(document).on('submit','#upload_img_welcome',function(){
+
+    // $('#upload_img_welcome').on('submit', function(event){
+        var img_id   = $('#img_id').val();
+        event.preventDefault();
+        $.ajax({
+            url: "<?php echo site_url('C_kaizen_admin/upload_image')?>",
+            method:"POST",
+            data:new FormData(this),
+            contentType:false,
+            cache:false,
+            processData:false,
+            success:function(data){
+                // $('#img_welcome').val('');
+               
+                load_data();
+                
+            }
+        })
     });
     
     
