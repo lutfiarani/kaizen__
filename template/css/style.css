@@ -519,7 +519,7 @@ a:focus {
 
 .news_section .box {
   margin-top: 45px;
-  width : 380px;
+  /* width : 380px; */
   /* padding  : 10px; */
   /* height: 75vh; */
   height : 450px;

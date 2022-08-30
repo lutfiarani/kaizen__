@@ -5,7 +5,7 @@
         <!-- <div class="col-md-3"> -->
           <div class="box">
             
-            <div class="detail-box" style="margin-top: 115px;">
+            <div class="detail-box" style="margin-top: 115px; padding:50px">
               <h2>
                 <b>Tentang Kami</b>
               </h2>
@@ -21,7 +21,7 @@
         <?php
             for($i=0; $i<count($tentang_kami); $i++){
                 $potongan = substr($tentang_kami[$i]['IMG_DESC'], 0, 25);
-                echo '<div class="col-md-3 border-info" style="border-color: #ff9494 !important ; background:white; padding: 5px; ">
+                echo '<div class="col-md-2 border-info" style="border-color: #ff9494 !important ; background:white; padding: 5px; ">
                 <div class="box" style="margin-top:0px; border:1px solid; width=370px; margin-top: 115px;">
                   <div class="img-box">
                     <img src="';

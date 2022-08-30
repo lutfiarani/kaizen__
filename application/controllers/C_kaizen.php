@@ -42,9 +42,9 @@ class C_kaizen extends CI_Controller {
 		$data['kaizen_story'] 		= $this->M_kaizen_admin->kaizen_story();
 		$data['gedung']  			= $this->M_kaizen->gedung();
 		$this->load->view('header');
-		// $this->load->view('beranda/isi', $data);
+		$this->load->view('beranda/isi', $data);
         $this->load->view('beranda/tentang_kami', $data); //sudah
-		// $this->load->view('beranda/aktivitas_kaizen', $data);//sudah
+		// $this->load->view('beranda/aktivitas_kaizen', $data); //sudah
 		// $this->load->view('beranda/kaizen_story', $data); //sudah
 		// $this->load->view('beranda/hadiah2', $hadiah); 
 		// $this->load->view('beranda/isi_ide', $data);
