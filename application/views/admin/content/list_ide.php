@@ -1,15 +1,7 @@
 <link href="<?php echo base_url();?>/template/css/rome.css" rel="stylesheet" />
 
 
- <!-- Main Content -->
- <div id="content">
 
-<!-- Topbar -->
-<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-    
-</nav>
-<!-- End of Topbar -->
 
 <!-- Begin Page Content -->
 <div class="container-fluid">
@@ -20,11 +12,11 @@
            <h1 class="h3 mb-0 text-gray-800">Status Ide</h1>
         </div>
         <div class="col-xl-2">
-            <a href="#" class="d-none d-sm-inline-block btn btn-lg btn-danger shadow-sm" id="tier3" type="button"><i
+            <a href="http://10.10.100.23/tier-tiga/" class="d-none d-sm-inline-block btn btn-lg btn-danger shadow-sm" id="tier3" type="button"><i
                 class="fas fa-building fa-sm text-white-50"></i> Review Tier 3 Update</a>
         </div>
         <div class="col-xl-2">
-            <a href="#" class="d-none d-sm-inline-block btn btn-lg btn-secondary shadow-sm" id="tier12" type="button"><i
+            <a href="http://10.10.100.23/fld/" class="d-none d-sm-inline-block btn btn-lg btn-secondary shadow-sm" id="tier12" type="button"><i
                 class="fas fa-users fa-sm text-white-50"></i> Review Tier 1&2 Update</a>
         </div>
     </div>
@@ -86,7 +78,7 @@
                             <th scope="col">Cell</th>
                             <th scope="col">Ide Kaizen</th>
                             <th scope="col">Status</th>
-                            <th scope="col">Siapa</th>
+                            <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody id="daftar_ide">
@@ -127,16 +119,16 @@
     //   })
     //   .trigger( "change" );
    
-    $(document).on('change','#action_ide',function(){
-        var action_id  = $(this).val();
-        var id         = $(this).attr('id_ide');
-        // var value = $('option:selected', this).text(); 
-        // alert(value);
-        edit_ide(id, action_id);
+    // $(document).on('change','#action_ide',function(){
+    //     var action_id  = $(this).val();
+    //     var id         = $(this).attr('id_ide');
+    //     // var value = $('option:selected', this).text(); 
+    //     // alert(value);
+    //     edit_ide(id, action_id);
         
         
         
-    });
+ 
      $('#katakunci').keyup(function(){
           var query  = $('#katakunci').val();
           var dari   = $('#dari').val();
@@ -179,12 +171,6 @@
                     '<td scope="col">'+ide.IDE+'</td>';
                     // $("#action_ide").val(ide.ACTION);
                     // '<td scope="col">'+ide.ACTION+'</td></tr>';
-                    
-                    html +='<td scope="col">'+
-                            '<select name="action_ide" id="action_ide"  id_ide = "'+ide.RECORDID+'">'+
-                            '<option value="1">Perlu follow up</option>'+
-                            '<option value="2">Sudah pernah</option>'+
-                            '<option value="3">komplain(bukan ide)</option></select></td>';
                     if(ide.ACTION == '1'){
                         action = 'Perlu follow up'
                     }else if(ide.ACTION == '2'){
@@ -192,7 +178,13 @@
                     }else if(ide.ACTION == '3'){
                       action = 'komplain(bukan ide)';
                     }
-                    html +='<td id="siapa">'+action+'</td>'+
+                    html +='<td id="siapa">'+action+'</td>';
+                    html +='<td scope="col">'+
+                            '<button type="button" id="status" data-id="'+ide.RECORDID+'" data-status="1" class="btn btn-primary btn-sm">Perlu Follow Up</button>'+
+                            '<button type="button" id="status" data-id="'+ide.RECORDID+'" data-status="2" class="btn btn-warning btn-sm">Sudah Pernah</button>'+
+                            '<button type="button" id="status" data-id="'+ide.RECORDID+'" data-status="3" class="btn btn-danger btn-sm">Komplain</button>'+
+                            '</td>';
+                    
                     '</tr>';
                     $("#action_ide option[data-value='" + response.val +"']").attr("selected","selected");
                         
@@ -221,7 +213,7 @@
         }
 
 
-      $( "#cari_data" ).click(function() {
+        $(document).on('click','#cari_data',function(){
             var query  = $('#katakunci').val();
             var dari   = $('#dari').val();
             var sampai = $('#sampai').val();
@@ -229,31 +221,37 @@
 
           });
 
+        $(document).on('click','#status',function(){
+          var id    =   $(this).attr('data-id');
+          var action    =   $(this).attr('data-status');
+          edit_ide(id, action);
+
+        });
+
       $( "#export_excel" ).click(function() {
           var query  = $('#katakunci').val();
           var dari   = $('#dari').val();
           var sampai = $('#sampai').val();
-          
+          // var url="<?php echo site_url('C_list_ide/index/')?>" + $.param(parameter);
+          //  var url="<?php echo site_url('C_kaizen/export_excel/')?>" + $.param(parameter);
           $.ajax({
-              url:"<?php echo site_url('C_kaizen/export_excel')?>",
-              method:"POST",
+              url:"<?php echo site_url('C_kaizen/export_excel_/')?>" ,
+              method:"GET",
               data:{query:query, dari:dari, sampai:sampai},
-              // dataType : 'json',
+              dataType: 'json',
               success:function(data)
               {
                 console.log(data);
                 
+                window.open(data);
+                
               }
           });
-            // alert('hai');
-        });
-
-        $( "#action_ide" ).click(function() {
-          var id    =   $(this).attr('id_ide');
-          var action    =   $('#action_ide').val();
-          edit_ide(id, action);
+           
 
         });
+
+       
 
        
   $(document).ready(function(){
@@ -264,7 +262,7 @@
 
 
     load_data();
-
+   
    
     });
     

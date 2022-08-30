@@ -23,16 +23,16 @@
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
   <!-- Custom styles for this template -->
-  <link href="<?php echo base_url();?>/template/css/style.css" rel="stylesheet" />
+  <link href="<?php echo base_url();?>template/css/style.css" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="<?php echo base_url();?>/template/css/responsive.css" rel="stylesheet" />
+  <link href="<?php echo base_url();?>template/css/responsive.css" rel="stylesheet" />
   <!-- css tambahan -->
-  <link href="<?php echo base_url();?>/template/css/baru.css" rel="stylesheet" />
+  <link href="<?php echo base_url();?>template/css/baru.css" rel="stylesheet" />
   <style>
     html, body {
-  height: 100%;
-  margin: 0;
-}
+      height: 100%;
+      margin: 0;
+    }
 
 .full-height {
   height: 100%;
@@ -69,7 +69,7 @@
                   <a class="nav-link" href="<?php echo base_url();?>c_kaizen/taget_kaizen_implemented">Status </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="<?php echo base_url();?>login">Login Admin </a>
+                  <a class="nav-link" href="<?php echo base_url();?>C_login">Login Admin </a>
                 </li>
                 
               </ul>

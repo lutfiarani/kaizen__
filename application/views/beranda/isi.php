@@ -171,15 +171,17 @@
         <div class="img-box" style="margin-left:0">
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="<?php echo base_url();?>/template/images/slider-img.jpg" alt="">
-              </div>
-              <div class="carousel-item">
-                <img src="<?php echo base_url();?>/template/images/slider-img.jpg" alt="">
-              </div>
-              <div class="carousel-item">
-                <img src="<?php echo base_url();?>/template/images/slider-img.jpg" alt="">
-              </div>
+              <?php
+                  for ($i=0 ; $i<count($slide); $i++){
+                    echo ' <div class="carousel-item active">
+                            <img src="';
+                    echo base_url();
+                    echo 'template/images/welcoming_page/'.$slide[$i]['IMG'].'" alt="" width="1015" 
+                    height="725">
+                  </div>';
+                  }
+              ?>
+              
             </div>
 
           </div>

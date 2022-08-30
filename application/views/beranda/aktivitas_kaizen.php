@@ -24,6 +24,7 @@
       <div class="custom_heading-container">
         <h2>
           Aktivitas Kaizen
+          
         </h2>
         <hr>
       </div>
@@ -31,32 +32,30 @@
       <div class="layout_padding2-top">
         <div class="row" style="background: #ff9494;">
           <div class="col-md-3" style="padding: 0px">
-           
-            <div class="img-box">
-              <img src="<?php echo base_url();?>/template/images/p-1.jpg" alt="">
+           <div class="img-box">
+              <img src="<?php echo base_url();?>/template/images/<?php echo $aktivitas_kaizen[0]['IMG']; ?>" alt="">
               
             </div>
-            
+           
           </div>
           <div class="col-md-3" style="padding: 15px">
+            <b><?php echo $aktivitas_kaizen[0]['IMG_TITLE'];?></b>
             <div class="img-box">
-                Kaizen Innovation Award
-                Perlombaan Kaizen terbaik selama 1 semester dengan acara dan hadiah yang sangat memukau
+                <?php echo $aktivitas_kaizen[0]['IMG_DESC'];?>
             </div>
           </div>
           <div class="col-md-3" style="padding: 0px">
            
             <div class="img-box">
-              <img src="<?php echo base_url();?>/template/images/p-1.jpg" alt="">
+              <img src="<?php echo base_url();?>/template/images/<?php echo $aktivitas_kaizen[1]['IMG']; ?>" alt="">
               
             </div>
             
           </div>
           <div class="col-md-3" style="padding: 15px">
-           
+            <b><?php echo $aktivitas_kaizen[1]['IMG_TITLE'];?></b>
             <div class="img-box">
-                Kaizen Innovation Award
-                Perlombaan Kaizen terbaik selama 1 semester dengan acara dan hadiah yang sangat memukau
+                <?php echo $aktivitas_kaizen[1]['IMG_DESC'];?>
             </div>
             
           </div>
@@ -67,33 +66,33 @@
 
         <div class="row" style="background: #e0e0e0;">
           <div class="col-md-3" style="padding: 15px">
-           
+            <b><?php echo $aktivitas_kaizen[2]['IMG_TITLE'];?></b>
             <div class="img-box">
-                Kaizen Innovation Award
-                Perlombaan Kaizen terbaik selama 1 semester dengan acara dan hadiah yang sangat memukau
+                
+                <?php echo $aktivitas_kaizen[2]['IMG_DESC'];?>
             </div>
             
           </div>
           <div class="col-md-3" style="padding: 0px">
            
             <div class="img-box">
-              <img src="<?php echo base_url();?>/template/images/p-1.jpg" alt="">
+              <img src="<?php echo base_url();?>/template/images/<?php echo $aktivitas_kaizen[2]['IMG']; ?>" alt="">
               
             </div>
             
           </div>
           <div class="col-md-3" style="padding: 15px">
-           
-          <div class="img-box">
-                Kaizen Innovation Award
-                Perlombaan Kaizen terbaik selama 1 semester dengan acara dan hadiah yang sangat memukau
+          <b><?php echo $aktivitas_kaizen[3]['IMG_TITLE'];?></b>
+            <div class="img-box">
+                
+                <?php echo $aktivitas_kaizen[3]['IMG_DESC'];?>
             </div>
             
           </div>
           <div class="col-md-3" style="padding: 0px">
            
             <div class="img-box">
-              <img src="<?php echo base_url();?>/template/images/p-1.jpg" alt="">
+              <img src="<?php echo base_url();?>/template/images/<?php echo $aktivitas_kaizen[3]['IMG']; ?>" alt="">
               
             </div>
             
@@ -105,31 +104,31 @@
           <div class="col-md-3" style="padding: 0px">
            
             <div class="img-box">
-              <img src="<?php echo base_url();?>/template/images/p-1.jpg" alt="">
+              <img src="<?php echo base_url();?>/template/images/<?php echo $aktivitas_kaizen[4]['IMG']; ?>" alt="">
             </div>
             
           </div>
           <div class="col-md-3" style="padding: 15px">
-           
+            <b><?php echo $aktivitas_kaizen[4]['IMG_TITLE'];?></b>
             <div class="img-box">
-                Kaizen Innovation Award
-                Perlombaan Kaizen terbaik selama 1 semester dengan acara dan hadiah yang sangat memukau
+                
+                <?php echo $aktivitas_kaizen[4]['IMG_DESC'];?>
             </div>
             
           </div>
           <div class="col-md-3" style="padding: 0px">
            
             <div class="img-box">
-              <img src="<?php echo base_url();?>/template/images/p-1.jpg" alt="">
+              <img src="<?php echo base_url();?>/template/images/<?php echo $aktivitas_kaizen[5]['IMG']; ?>" alt="">
               
             </div>
             
           </div>
           <div class="col-md-3" style="padding: 15px">
-           
+            <b><?php echo $aktivitas_kaizen[5]['IMG_TITLE'];?></b>
             <div class="img-box">
-                Kaizen Innovation Award
-                Perlombaan Kaizen terbaik selama 1 semester dengan acara dan hadiah yang sangat memukau
+                
+                <?php echo $aktivitas_kaizen[5]['IMG_DESC'];?>
             </div>
             
           </div>

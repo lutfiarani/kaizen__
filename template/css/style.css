@@ -24,7 +24,8 @@ span.a {
 
 
 .layout_padding {
-  padding: 75px 0;
+  /* padding: 75px 0; */
+  height: 100%;
 }
 
 .layout_padding2 {
@@ -510,6 +511,7 @@ a:focus {
 
 .news_section {
   background-image: url(../images/background_horizontal.png);
+  height : 100%;
   /* background-color: #0000ff; */
   
   /* opacity: 0.3; */
@@ -517,6 +519,13 @@ a:focus {
 
 .news_section .box {
   margin-top: 45px;
+  width : 380px;
+  /* padding  : 10px; */
+  /* height: 75vh; */
+  height : 450px;
+  /* margin-top: 115px; */
+   /* margin-left: 115px; */
+  /*margin-right: 115px; */
 }
 
 .news_section .box img {
@@ -534,7 +543,7 @@ a:focus {
 }
 
 .news_section .box .action-box a {
-  margin-left: 15px;
+  /* margin-left: 15px; */
   opacity: 0.6;
 }
 

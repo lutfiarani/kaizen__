@@ -35,7 +35,7 @@
                   </div>
                   <div>
                     <!-- <input type="text" placeholder="gedung" id="gedung" name="gedung"> -->
-                    <select name="gedung" id="gedung" placeholder="gedung">
+                    <!-- <select name="gedung" id="gedung" placeholder="gedung">
                         <option value="">Pilih Gedung</option>
                         <?php
                             $jmlgedung = count($gedung);
@@ -44,9 +44,10 @@
                                 echo "<option value=".$data['FACTORY2'].">Gedung ".$data['FACTORY2']."</option>";
                             }
                             
-                        ?>
+                        ?> 
                         <option value="SUPPORTING">Supporting</option>
-                    </select>
+                    </select> -->
+                    <input type="text" placeholder="Gedung" id="gedung" name="gedung" readOnly>
                   </div>
                   <div>
                     <input type="text" placeholder="Bagian" id="bagian" name="bagian" readOnly>
@@ -56,7 +57,7 @@
                         <option value="">Pilih Cell</option>
                     </select>
                   </div>
-                  <div>
+                  <!-- <div>
                     <select name="kategori" id="kategori" placeholder="kategori">
                         <option value="">Pilih Kategori</option>
                         <option value="Productivity">Productivity</option>
@@ -66,7 +67,7 @@
                         <option value="Other">Other</option>
                         
                     </select>
-                  </div>
+                  </div> -->
                   <!-- <div class="mt-5">
                     <button type="button" id="submit_data">
                       send
@@ -78,8 +79,8 @@
           </div>
           <div class="col-md-5">
           
-                <!-- <textarea rows="15" cols="60" placeholder="Isi ide Anda di sini" id="ide" nama="ide" ></textarea> -->
-                <div id="ide"></div>
+                <textarea rows="15" cols="60" placeholder="Isi ide Anda di sini" id="ide" nama="ide" ></textarea>
+                <!-- <div id="ide"></div> -->
                 <div class="contact_form-container" style="margin-top:20px">
                 <button type="button" id="submit_data">
                       send
@@ -112,20 +113,37 @@
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
   <script>
+    // var timer = 0;
+    // var alamat2 = "<?php echo base_url();?>C_kaizen/"
+    // function startRedirect() {
+    //   timer = setTimeout(function () {
+    //     window.location.replace(alamat2);
+    //   }, 30000);
+    // }
+    // function restartTimer() {
+    //   clearTimeout(timer);
+    //   startRedirect();
+    // }
+    // $(function () {
+    //   startRedirect();
+    //   $(document).mousemove(restartTimer).keyup(restartTimer);
+    // });
+
+
     $(document).ready(function() {
-      $('#ide').summernote({
-        placeholder: 'Isi ide Anda di sinisi',
-        tabsize: 2,
-        height: 280,
-        toolbar: [
-          ['style', ['bold', 'italic', 'underline', 'clear']],
-          ['font', ['strikethrough', 'superscript', 'subscript']],
-          ['fontsize', ['fontsize']],
-          ['color', ['color']],
-          ['para', ['ul', 'ol', 'paragraph']],
-          ['height', ['height']]
-        ]
-      });
+      // $('#ide').summernote({
+      //   placeholder: 'Isi ide Anda di sinisi',
+      //   tabsize: 2,
+      //   height: 280,
+      //   toolbar: [
+      //     ['style', ['bold', 'italic', 'underline', 'clear']],
+      //     ['font', ['strikethrough', 'superscript', 'subscript']],
+      //     ['fontsize', ['fontsize']],
+      //     ['color', ['color']],
+      //     ['para', ['ul', 'ol', 'paragraph']],
+      //     ['height', ['height']]
+      //   ]
+      // });
     });
 
     
@@ -144,7 +162,13 @@
                     $('#nama').val(data.NAME);
                     $('#bagian').val(data.DESCRIPTION);
                     $('#jabatan').val(data.TITLECODE);
-                    
+                    $('#gedung').val(data.NAMA_GEDUNG);
+                    if(($('#gedung').val() == 'MAIN OFFICE')||($('#gedung').val() == 'GEDUNG SABLON')||($('#gedung').val() == 'GEDUNG MATERIAL')||($('#gedung').val() == 'GEDUNG ENGINEERING')||($('#gedung').val() == 'GEDUNG QIP')||($('#gedung').val() == 'OTHER MAIN BUILDING')){
+                        $('#cell').hide()
+                    }else{
+                      $('#cell').show()
+                      cell();
+                    }
                   
                 }
                 else{
@@ -159,14 +183,19 @@
           });
     });
 
-    $( "#gedung" ).change(function() {
-      if($('#gedung').val() == 'SUPPORTING'){
-        $('#cell').hide()
-      }else{
-        $('#cell').show()
-      }
+   	
+
+    // $( "#gedung" ).change(function() {
+    //   if(($('#gedung').val() == 'MAIN OFFICE')||($('#gedung').val() == 'GEDUNG SABLON')||($('#gedung').val() == 'GEDUNG MATERIAL')||($('#gedung').val() == 'GEDUNG ENGINEERING')||($('#gedung').val() == 'GEDUNG QIP')||($('#gedung').val() == 'OTHER MAIN BUILDING')){
+    //     $('#cell').hide()
+    //   }else{
+    //     $('#cell').show()
+    //   }
+    function cell(){
+      var gedung = $('#gedung').val()
+      var gedung2 = gedung.substr(gedung.length - 1);
       $.ajax({
-            url : "<?php echo site_url('C_kaizen/cekcell/'); ?>"+$('#gedung').val(),
+            url : "<?php echo site_url('C_kaizen/cekcell/'); ?>"+gedung2,
             success : function(o) {
               console.log(o)
               $("#cell").html(o.data);
@@ -176,7 +205,8 @@
                 console.log(data)
             }
           });
-    });
+    // });
+      }
 
     $( "#submit_data" ).click(function() {
       var nik       = $('#nik').val()
